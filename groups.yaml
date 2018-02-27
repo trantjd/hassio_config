@@ -1,0 +1,129 @@
+#  default_view:
+  home_view:
+    view: yes
+    icon: mdi:home 
+    entities:
+      - group.awesome_people
+      - group.climate_outdoor
+      - group.climate_indoor
+  downstairs:
+    name: Downstairs
+    view: yes
+    entities:
+      - group.kitchen
+      - group.family_room
+      - climate.main_floor
+      - sensor.main_floor_temperature
+      - sensor.main_floor_humidity
+      - binary_sensor.main_floor_occupancy
+      - binary_sensor.office_occupancy
+  family_room:
+    name: Family Room
+    entities:
+      - light.family_room_fan_light
+  kitchen:
+    name: Kitchen
+#    entities:
+  upstairs:
+    name: Upstairs
+#    icon: mdi:account-multiple
+    view: yes
+    entities:
+      - light.master_bedroom_fan_light
+      - climate.upstairs
+      - sensor.upstairs_temperature
+      - sensor.upstairs_humidity
+      - binary_sensor.upstairs_occupancy
+      - binary_sensor.violet_room_occupancy
+  outside:
+    name: Outside
+    view: yes
+    entities:
+      - cover.garage_door
+      - group.front_door
+      - light.screened_porch_light
+      - light.basement_door_light
+      - group.climate_outdoor
+      - group.sprinklers
+  sprinklers:
+    name: Sprinkler Zones
+    entities:
+      - switch.zone_1__front_mulch_bed
+      - switch.zone_2__front_sidewalk_to_porch
+      - switch.zone_3__front_before_sidewalk
+      - switch.zone_4__side_mulch_bed
+      - switch.zone_5__backyard_right
+      - switch.zone_6__backyard_left
+  front_door:
+    name: Front Door
+    entities:
+      - camera.front_door
+      - sensor.ring_front_door_battery
+      - sensor.ring_front_door_last_activity
+      - sensor.ring_front_door_last_ding
+      - sensor.ring_front_door_last_motion
+      - sensor.ring_front_door_volume
+      - sensor.ring_front_door_wifi_signal_category
+      - sensor.ring_front_door_wifi_signal_strength
+      - binary_sensor.ring_front_door_motion
+      - binary_sensor.ring_front_door_ding
+  home_media:
+    name: Home Media
+    view: yes
+    entities:
+      - group.upstairs_media
+      - group.downstairs_media
+      - sensor.pocketcasts_unlistened_episodes
+  upstairs_media:
+    name: Upstairs Media
+    entities:
+      - remote.master_bedroom_hub
+      - media_player.loft_chromecast
+      - media_player.master_bed_sonos
+      - media_player.master_bedroom_home_mini
+  downstairs_media:
+    name: Downstairs Media
+    entities:
+      - remote.family_room_hub
+      - media_player.shield
+      - media_player.familyroom_sonos
+      - media_player.diningroom_sonos
+      - media_player.family_room_audio
+      - media_player.family_room_home
+      - media_player.denon_avrx2000
+      - configurator.plex_media_server
+      - media_player.porch_speakers
+      - media_player.workout_chromecast
+  climate_indoor:
+    name: Indoor Climate
+    view: no
+    entities:
+#      - sensor.main_floor_temperature
+#      - sensor.main_floor_humidity
+#      - sensor.office_temperature
+      - climate.main_floor
+      - climate.upstairs
+  climate_outdoor:
+    name: Outdoor Climate
+    view: no
+    entities:
+      - sensor.yr
+      - sun.sun
+  awesome_people:
+    name: Awesome People
+    view: no
+    entities:
+      - device_tracker.jeremy_phone
+      - device_tracker.rachel_phone
+  ha_status:
+    name: Status & Settings
+    view: yes
+    entities:
+      - sensor.cpu_used
+      - sensor.disk_free_
+      - sensor.last_boot
+      - sensor.ram_used
+      - sensor.since_last_boot
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
