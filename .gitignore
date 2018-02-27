@@ -3,6 +3,7 @@
 !scenes
 !.gitignore
 !README.md
+!gitupdate.sh
 secrets.yaml
 *.yaml.*
 known_devices.yaml
